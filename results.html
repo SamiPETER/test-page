@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض النتائج</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>نتائج الحساب</h1>
+        <p id="bmr-result"></p>
+        <p id="tdee-result"></p>
+
+        <h2>الهدف:</h2>
+        <select id="goal">
+            <option value="maintain">الحفاظ على الوزن</option>
+            <option value="lose">إنقاص الوزن</option>
+            <option value="build">بناء العضلات</option>
+        </select>
+
+        <button onclick="calculateNutrients()">احسب المغذيات</button>
+        <div id="nutrients"></div>
+        
+        <button onclick="window.location.href='alerts.html'">التنبيهات</button>
+        <button onclick="window.location.href='profile.html'">عرض البيانات الشخصية</button>
+    </div>
+
+    <script src="results.js"></script>
+</body>
+</html>

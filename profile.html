@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البروفايل</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>بياناتك الشخصية</h1>
+        <p><strong>الاسم:</strong> <span id="name-display"></span></p>
+        <p><strong>العمر:</strong> <span id="age-display"></span></p>
+        <p><strong>الوزن:</strong> <span id="weight-display"></span></p>
+        <p><strong>الطول:</strong> <span id="height-display"></span></p>
+        <p><strong>الجنس:</strong> <span id="gender-display"></span></p>
+        <p><strong>النشاط البدني:</strong> <span id="activity-display"></span></p>
+        <p><strong>حالة مرض السكري:</strong> <span id="diabetes-display"></span></p>
+
+        <button onclick="goBack()">رجوع</button>
+    </div>
+
+    <script>
+        // Retrieve data from localStorage and display
+        document.getElementById('name-display').textContent = localStorage.getItem('name');
+        document.getElementById('age-display').textContent = localStorage.getItem('age');
+        document.getElementById('weight-display').textContent = localStorage.getItem('weight');
+        document.getElementById('height-display').textContent = localStorage.getItem('height');
+        document.getElementById('gender-display').textContent = localStorage.getItem('gender');
+        document.getElementById('activity-display').textContent = localStorage.getItem('activity');
+        document.getElementById('diabetes-display').textContent = localStorage.getItem('diabetes');
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
